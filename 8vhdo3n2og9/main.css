@@ -1,0 +1,131 @@
+/* tag modification */
+input {
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+/* height and width properties */
+.max-width {
+    width: 100%;
+}
+
+.max-height {
+    height: 100%;
+}
+
+.max-height-vh {
+    height: 100vh;
+}
+
+/* background color */
+.bg-black {
+    background-color: black;
+}
+
+.bg-love {
+    background: linear-gradient(15deg, red, white);
+}
+
+.bg-love-animated {
+    background: linear-gradient(15deg, rgb(255, 138, 138), rgb(255, 255, 255));
+    background-size: 300% 300%;
+    animation: color 10s ease-in-out infinite;
+}
+@keyframes color {
+    0% {
+        background-position: 0 20%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 20%;
+    }
+}
+
+/* font color */
+.fc-white {
+    color: white;
+}
+
+.fc-light-red {
+    color: rgb(226, 71, 71);
+}
+
+/* display properties */
+
+.flex {
+    display: flex;
+}
+
+/* align properties */
+.align-vertical {
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.align-horizontal {
+    align-items: center;
+    flex-direction: row;
+}
+
+.align-center { 
+    justify-content: center;
+    align-items: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/* special items */
+.loading_bar {
+    height: 2px;
+    width: 80vw;
+    background-color: grey;
+}
+
+.loading_bar.value {
+    height: 2px;
+    width: 0%;
+    background-color: white;
+}
+
+/* transition stuff */
+.hideable {
+    opacity: 100%;
+    transition: opacity 1000ms; 
+}
+
+.hideable.fadeHide {
+    opacity: 0%;
+}
+
+.hideable.fullHide {
+    display: none;
+}
+
+/* separators */
+.vertical-separator {
+    height: 10px;
+    width: 0px;
+}
+
+.vertical-separator-1 {
+    height: 5px;
+    width: 0px;
+}
+
+.vertical-separator-2 {
+    height: 10px;
+    width: 0px;
+}
+
+.vertical-separator-3 {
+    height: 20px;
+    width: 0px;
+}
