@@ -9,10 +9,9 @@ let love_screen = document.getElementById('love_screen');
 
 let body = document.getElementsByTagName('body')[0];
 
-console.log(loading_screen);
-let rand_loading_values = [0, 0, 0, 0, 0, 0, 0, 0, 10, 40, 85, 94, 96, 97, 97, 98, 98, 
+let rand_loading_values = [0, 0, 0, 0, 0, 0, 0, 0, 10, 40, 40, 40, 40, 40, 41, 41, 41, 41, 85, 94, 96, 97, 97, 98, 98, 
     99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 100];
-let loading_delay = 1;
+let loading_delay = 100;
 
 function simulate_loading(index = 0) {
     setTimeout(() => {
@@ -38,23 +37,23 @@ start_screen.onclick = () => {
     clearEffect(start_screen_text);
     setTimeout(() => {
         playSound('enter ping');
-        music.volume = 0.2;
+        music.volume = 0.6;
         hideFade(start_screen);
         setTimeout( () => {
             showFade(love_screen);
             setTimeout(() => {
-                playSound('enter ping');
-                soundOnEnded('enter ping', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
-                // playSound('intro narration');
-                // soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
+                // playSound('enter ping');
+                // soundOnEnded('enter ping', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
+                playSound('intro narration');
+                soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
             }, 500)
         }, 1500);
     }, 500);
 }
 
 var username = null;
-function getUserName() {
-    username = document.getElementById('name_input').value;
-    console.log(username);
+function getUserNameAndGo() {
+    username = `${document.getElementById('name_input').value}`.trim();
+    hideFade(document.getElementById('get_name_section'));
 }
 

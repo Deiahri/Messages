@@ -1,6 +1,6 @@
 var music = new Audio('./music/First date.mp3');
 music.load();
-music.volume = 0.6;
+music.volume = 1;
 music.loop = true;
 
 const soundLibrary = {
