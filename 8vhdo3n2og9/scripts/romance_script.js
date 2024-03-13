@@ -945,7 +945,7 @@ function initialize_romance_script() {
                 }, {
                     'message': username+' is Calling Junda', 'message_type': 'alert', 'sender': 'none', delay: 300
                 }, {
-                    'message': 'Junda is currently on DND. Try calling again', 'message_type': 'alert', 'sender': 'none', delay: 2000
+                    'message': 'Junda is currently on DND. Try calling again', 'message_type': 'alert', 'sender': 'none', delay: 5000
                 }],
                 'response': [],
                 'choices': [{
@@ -954,6 +954,8 @@ function initialize_romance_script() {
                         'message': '---', 'message_type': 'alert', 'sender': 'none', delay: 10
                     }, {
                         'message': username+' is Calling Junda', 'message_type': 'alert', 'sender': 'none', delay: 300
+                    }, {
+                        'message':'Junda did not pick up', 'message_type': 'alert', 'sender': 'none', delay: 3000
                     }, junda_audio_message]
                 }]
             }]

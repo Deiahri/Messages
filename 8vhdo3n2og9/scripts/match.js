@@ -126,13 +126,13 @@ function simulate_matches() {
         name: 'Fermina',
         description: 'I got a nice curvy body, just the way Michael likes it. HMU if you\'re nice and chocolaty, I\'ll give you everything you ever wanted.',
         image_url: './images/Fermina.png'
-    }), 27000);
+    }), 38000);
 
     setTimeout(add_match.bind(null, {
         name: 'Junda',
         description: 'I got a big butt. Cassi is clearly my type',
         image_url: './images/junda.jpg'
-    }), 38000);
+    }), 55000);
 }
 
 

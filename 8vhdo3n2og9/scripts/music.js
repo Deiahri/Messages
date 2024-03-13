@@ -15,7 +15,7 @@ const soundLibrary = {
     'match': new Audio('./music/sfx/match.ogg'),
     'no match': new Audio('./music/sfx/no match.ogg'),
     'new match': new Audio('./music/sfx/new match.ogg'),
-    'isaac': new Audio('./music/audio messages/confy.mp3'),
+    'isaac': new Audio('./music/audio messages/isaac.mp3'),
     'confy': new Audio('./music/audio messages/confy.mp3'),
     'gui': new Audio('./music/audio messages/gui.mp3'),
     'junda': new Audio('./music/audio messages/junda.mp3')
