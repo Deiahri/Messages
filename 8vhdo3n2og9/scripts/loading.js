@@ -7,6 +7,7 @@ let start_screen = document.getElementById('start_screen');
 let start_screen_text = document.getElementById('start_screen_text');
 let love_screen = document.getElementById('love_screen');
 
+
 let body = document.getElementsByTagName('body')[0];
 
 let rand_loading_values = [0, 0, 0, 0, 0, 0, 0, 0, 10, 40, 40, 40, 40, 40, 41, 41, 41, 41, 85, 94, 96, 97, 97, 98, 98, 
@@ -51,9 +52,15 @@ start_screen.onclick = () => {
     }, 500);
 }
 
-var username = null;
+
 function getUserNameAndGo() {
     username = `${document.getElementById('name_input').value}`.trim();
-    hideFade(document.getElementById('get_name_section'));
+    if(username) {
+        hideFade(document.getElementById('get_name_section'));
+        document.getElementById('warning_text').innerHTML = ''
+        
+    } else {
+        document.getElementById('warning_text').innerHTML = 'Your first name cannot be blank'
+    }
 }
 
