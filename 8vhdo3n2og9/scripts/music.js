@@ -7,7 +7,7 @@ const soundLibrary = {
     'music': music,
     'enter ping': new Audio('./music/sfx/enter ping.ogg'),
     'intro narration': new Audio('./music/narration/dinner for two intro processed.ogg'),
-    'nar2': new Audio('./music/narration/getinfonar.mp3'),
+    'nar2': new Audio('./music/narration/nar2.mp3'),
     'message ping': new Audio('./music/sfx/message ping.ogg'),
     'message send': new Audio('./music/sfx/message send.ogg'),
     'next': new Audio('./music/sfx/next.ogg'),

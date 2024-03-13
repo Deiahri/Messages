@@ -109,7 +109,6 @@ function decline_current_match() {
 
 
 function simulate_matches() {
-    console.log('called JSJSDJD');
     update_matches();
     setTimeout(add_match.bind(null, {
         name: 'Cassi',
@@ -132,7 +131,7 @@ function simulate_matches() {
     setTimeout(add_match.bind(null, {
         name: 'Junda',
         description: 'I got a big butt. Cassi is clearly my type',
-        image_url: './images/Junda.jpg'
+        image_url: './images/junda.jpg'
     }), 13000);
 }
 
