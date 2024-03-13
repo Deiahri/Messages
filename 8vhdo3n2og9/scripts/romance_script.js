@@ -123,7 +123,9 @@ let romance_script;
 function initialize_romance_script() {
     romance_script = {
         'Cassi': {
-            response: [
+            response: [{
+                'message': 'You matched with Cassi', 'message_type': 'alert', 'sender': 'none', 'delay': 10
+                },
                 {
                     'sender': 'none',
                     'message': 'Hey baby',
@@ -298,34 +300,43 @@ function initialize_romance_script() {
                             ],
                             'response': [
                                 {
-                                    'message': 'LMAAOOOOO', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'LMAAOOOOO', 'message_type': 'text', 'sender': 'Cassi', 'delay': 2000
                                 },
                                 {
-                                    'message': 'HAAHAHAHAHAAHAA', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'HAAHAHAHAHAAHAA', 'message_type': 'text', 'sender': 'Cassi', 'delay': 1500
                                 },
                                 {
-                                    'message': 'HAAHAHAHAHAAHAA', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'HAAAAAAAAAAAAAAAAAAAAAAAAA', 'message_type': 'text', 'sender': 'Cassi', 'delay': 4000
                                 },
                                 {
-                                    'message': 'HAHAAHA', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'Hold on a second', 'message_type': 'text', 'sender': 'Cassi', 'delay': 1000
                                 },
                                 {
-                                    'message': 'attachment', 'message_type': 'photo', 'sender': 'Cassi', 'delay': 60, 'image_url': './images/LMAO.jpg'
+                                    'message': 'attachment', 'message_type': 'photo', 'sender': 'Cassi', 'delay': 3000, 'image_url': './images/LMAO.jpg'
                                 },
                                 {
-                                    'message': 'I\'m actually crying over here', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'LMAAOAOAOAOOO DIS NIGGA ONLY GOT A 2.5L INLINE 4', 'message_type': 'text', 'sender': 'Cassi', 'delay': 3000
                                 },
                                 {
-                                    'message': 'You\'re very funny.', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'WITH 169 HP AND 167 POUND-FEET OF TORQUE', 'message_type': 'text', 'sender': 'Cassi', 'delay': 1500
                                 },
                                 {
-                                    'message': 'It\'s nice to find a guy that can make me laugh again', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'LMAAAOO', 'message_type': 'text', 'sender': 'Cassi', 'delay': 1500
                                 },
                                 {
-                                    'message': 'I wonder what other noises you can make come out of me', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'I\'m actually crying over here', 'message_type': 'text', 'sender': 'Cassi', 'delay': 5000
                                 },
                                 {
-                                    'message': 'Take me somewhere special this weekend, okay?', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                    'message': 'You\'re very funny.', 'message_type': 'text', 'sender': 'Cassi', 'delay': 3500
+                                },
+                                {
+                                    'message': 'It\'s nice to find a guy that can make me laugh again', 'message_type': 'text', 'sender': 'Cassi', 'delay': 6000
+                                },
+                                {
+                                    'message': 'I wonder what other noises you can make come out of me', 'message_type': 'text', 'sender': 'Cassi', 'delay': 4000
+                                },
+                                {
+                                    'message': 'Take me somewhere special this weekend, okay?', 'message_type': 'text', 'sender': 'Cassi', 'delay': 2000
                                 },
                             ],
                             choices: [
@@ -338,10 +349,10 @@ function initialize_romance_script() {
                                     ],
                                     'response': [
                                         {
-                                            'message': '2.5L camry. Hilarious.', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                            'message': '2.5L camry. Hilarious.', 'message_type': 'text', 'sender': 'Cassi', 'delay': 5000
                                         },
                                         {
-                                            'message': 'Talk to you soon.', 'message_type': 'text', 'sender': 'Cassi', 'delay': 60
+                                            'message': 'Talk to you soon.', 'message_type': 'text', 'sender': 'Cassi', 'delay': 3000
                                         },
                                         cassi_audio_message
                                     ],
@@ -362,13 +373,13 @@ function initialize_romance_script() {
                             'sender': 'Cassi',
                             'message': 'Who tf is Isaac',
                             'message_type': 'text',
-                            'delay': 40
+                            'delay': 4000
                         },
                         {
                             'sender': 'Cassi',
                             'message': 'Are you saying I look like a man?',
                             'message_type': 'text',
-                            'delay': 30
+                            'delay': 3500
                         }
                     ],
                     choices: [
@@ -376,15 +387,15 @@ function initialize_romance_script() {
                             'title': 'No, you look like my friends',
                             'messages': [
                                 { 
-                                    'message': 'No, but you look like one of my friends', 'message_type': 'text', 'sender': username 
+                                    'message': 'No, but you look like one of my friends', 'message_type': 'text', 'sender': username, delay: 10
                                 }
                             ],
                             'response': [
                                 { 
-                                    'message': 'So you are calling me a man', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'So you are calling me a man', 'message_type': 'text', 'sender': 'Cassi', delay: 3000
                                 },
                                 { 
-                                    'message': 'Bitch', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'Bitch', 'message_type': 'text', 'sender': 'Cassi', delay: 2000
                                 }
                             ],
                             choices: [
@@ -392,24 +403,24 @@ function initialize_romance_script() {
                                     'title': 'Send dick pic to assert dominance',
                                     'messages': [
                                         { 
-                                            'message': 'Shmeat Supreme', 'message_type': 'photo', 'sender': username 
+                                            'message': 'Shmeat Supreme', 'message_type': 'photo', 'sender': username, delay: 2000
                                         },
                                     ],
                                     'response': [
                                         { 
-                                            'message': 'My retort.png', 'message_type': 'photo', 'image_url': './images/wood.jpeg', 'sender': 'Cassi' 
+                                            'message': 'My retort.png', 'message_type': 'photo', 'image_url': './images/wood.jpeg', 'sender': 'Cassi', delay: 5000
                                         },
                                         { 
-                                            'message': 'Remember me', 'message_type': 'text', 'sender': 'Cassi'
+                                            'message': 'Remember me', 'message_type': 'text', 'sender': 'Cassi', delay: 4000
                                         },
                                         { 
-                                            'message': 'Bitch', 'message_type': 'text', 'sender': 'Cassi'
+                                            'message': 'Bitch', 'message_type': 'text', 'sender': 'Cassi', delay: 1000
                                         },
                                         { 
-                                            'message': 'Cassi has shafted you', 'message_type': 'alert', 'sender': 'none'
+                                            'message': 'Cassi has shafted you', 'message_type': 'alert', 'sender': 'none', delay: 2000
                                         },
                                         { 
-                                            'message': 'Also Cassi has blocked you', 'message_type': 'alert', 'sender': 'none'
+                                            'message': 'Also Cassi has blocked you', 'message_type': 'alert', 'sender': 'none', delay: 3000
                                         },
                                         cassi_audio_message
                                     ]
@@ -425,22 +436,25 @@ function initialize_romance_script() {
                             ],
                             'response': [
                                 { 
-                                    'message': 'You know, I like that about you.', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'You know, I like that about you.', 'message_type': 'text', 'sender': 'Cassi', delay: 3000
                                 },
                                 { 
-                                    'message': 'You\'re smart', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'You\'re smart', 'message_type': 'text', 'sender': 'Cassi', delay: 5000
                                 },
                                 { 
-                                    'message': 'Smart enough to see that I have a massive shaft', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'Smart enough to see that I underneath all these curves', 'message_type': 'text', 'sender': 'Cassi', delay: 4000
                                 },
                                 { 
-                                    'message': 'But fuck you, you gorila back ass nigga.', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'is a massive shaft', 'message_type': 'text', 'sender': 'Cassi', delay: 2000
                                 },
                                 { 
-                                    'message': 'Don\'t expose my cover', 'message_type': 'text', 'sender': 'Cassi'
+                                    'message': 'But fuck you, you gorila back ass nigga.', 'message_type': 'text', 'sender': 'Cassi', delay: 8000
                                 },
                                 { 
-                                    'message': 'Cassi has blocked you', 'message_type': 'alert', 'sender': 'Cassi'
+                                    'message': 'Don\'t expose my cover', 'message_type': 'text', 'sender': 'Cassi', delay: 4000
+                                },
+                                { 
+                                    'message': 'Cassi has blocked you', 'message_type': 'alert', 'sender': 'Cassi', delay: 1000
                                 },
                                 cassi_audio_message
                             ]
@@ -450,9 +464,11 @@ function initialize_romance_script() {
             ]
         },
         'Trade with the pro': {
-            'response': [
+            'response': [{
+                'message': 'You matched with The Pro', 'message_type': 'alert', 'sender': 'none', 'delay': 10
+                },
                 {
-                    'message': 'hey kanayo!', 'message_type': 'text', 'sender': 'The Pro'
+                    'message': 'hey kanayo!', 'message_type': 'text', 'sender': 'The Pro', delay: 8000
                 }
             ],
             'choices': [
@@ -602,7 +618,7 @@ function initialize_romance_script() {
                                 'message': 'Fine', 'message_type': 'text', 'sender': username, 'delay': 10
                             }],
                             'response': [{
-                                    'message': 'Fine', 'message_type': 'text', 'sender': 'The pro', 'delay': 1000
+                                    'message': 'Wait, really?', 'message_type': 'text', 'sender': 'The pro', 'delay': 7000
                                 },{
                                     'message': 'See you in 5', 'message_type': 'text', 'sender': 'The pro', 'delay': 4000
                                 },{

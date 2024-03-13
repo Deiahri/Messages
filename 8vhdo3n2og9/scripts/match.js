@@ -120,19 +120,19 @@ function simulate_matches() {
         name: 'Trade with the pro',
         description: 'I know you like this RIP(e) grandma pussy',
         image_url: './images/pro.jpg'
-    }), 9000);
+    }), 13000);
 
     setTimeout(add_match.bind(null, {
         name: 'Fermina',
         description: 'I got a nice curvy body, just the way Michael likes it. HMU if you\'re nice and chocolaty, I\'ll give you everything you ever wanted.',
         image_url: './images/Fermina.png'
-    }), 18000);
+    }), 27000);
 
     setTimeout(add_match.bind(null, {
         name: 'Junda',
         description: 'I got a big butt. Cassi is clearly my type',
         image_url: './images/junda.jpg'
-    }), 13000);
+    }), 38000);
 }
 
 
@@ -152,4 +152,9 @@ match_disapprove_btn.onclick = decline_current_match;
 //     image_url: './images/Cassi.png'
 // });
 
-// simulate_matches();
+// setTimeout(() => {
+//     simulate_matches();
+// username = 'your mom';
+// initialize_romance_script();
+// }, 200);
+

@@ -36,6 +36,12 @@ function loadMessageThread() {
         current_sender = message.sender;
         current_message_thread_messages.push(new Message_Thread_Message(message));
     }
+    
+    if(romance_path[current_message_thread] && messages[current_message_thread].messages && messages[current_message_thread].messages.length > 1) {
+        refresh_dialog_btn.classList.remove('fullHide');
+    } else {
+        refresh_dialog_btn.classList.add('fullHide');
+    }
 
     // console.log(current_message_thread_messages);
     for(let index = current_message_thread_messages.length-1; index >= 0; index--) {
