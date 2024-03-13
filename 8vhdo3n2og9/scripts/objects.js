@@ -66,6 +66,7 @@ class Message_Thread_Message {
         this.image_url = message_json.image_url
         this.onclick = message_json.onclick;
         this.audio_name = message_json.audio_name
+        this.clicked = 0;
         this.build_element();
     }
 

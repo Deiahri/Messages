@@ -38,7 +38,7 @@ start_screen.onclick = () => {
     clearEffect(start_screen_text);
     setTimeout(() => {
         playSound('enter ping');
-        music.volume = 0.6;
+        music.volume = 0.3;
         hideFade(start_screen);
         setTimeout( () => {
             showFade(love_screen);
@@ -46,7 +46,7 @@ start_screen.onclick = () => {
                 // playSound('enter ping');
                 // soundOnEnded('enter ping', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
                 playSound('intro narration');
-                soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
+                soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.8; })
             }, 500)
         }, 1500);
     }, 500);
@@ -56,9 +56,20 @@ start_screen.onclick = () => {
 function getUserNameAndGo() {
     username = `${document.getElementById('name_input').value}`.trim();
     if(username) {
-        hideFade(document.getElementById('get_name_section'));
-        document.getElementById('warning_text').innerHTML = ''
-        
+        if(username.toLowerCase() == 'fermina' || username.toLowerCase() == 'cassi' || username.toLowerCase() == 'trade with the pro') {
+            document.getElementById('warning_text').innerHTML = 'You can\'t use that name...'
+        } else {
+            initialize_romance_script();
+            hideFade(document.getElementById('get_name_section'));
+            document.getElementById('warning_text').innerHTML = ''
+            soundOnEnded('nar2', ()=> {
+                music.volume = 0.8;
+                showFade(match_page);
+                simulate_matches();
+            });
+            music.volume = 0.05;
+            playSound('nar2');
+        }
     } else {
         document.getElementById('warning_text').innerHTML = 'Your first name cannot be blank'
     }

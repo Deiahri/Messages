@@ -10,6 +10,7 @@ back_to_text_page_btn.onclick = () => {
 var message_option_section = document.getElementById('message_option_section');
 
 var message_thread_section = document.getElementById('message_thread_section');
+var message_thread_section_name = document.getElementById('message_thread_section_name');
 
 var current_message_thread = null;
 
@@ -25,6 +26,7 @@ function loadMessageThread() {
     
     current_message_thread = messenger_page.getAttribute('thread_name');
     messages[current_message_thread].read = true;
+    message_thread_section_name.innerHTML = current_message_thread;
     loadTexts();
     for(let message of messages[current_message_thread].messages) {
         if(current_sender!=message.sender && message.sender != 'none') {

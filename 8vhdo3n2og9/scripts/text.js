@@ -53,7 +53,6 @@ function sendMessage(thread, message_json) {
     } else {
         playSound('message send');
     }
-    text_button_notification.classList.remove('hidden');
     loadTexts();
     if(current_page == 'messenger_page') {
         loadMessageThread();
@@ -90,6 +89,11 @@ function loadTexts() {
         }
     }
     message_count.innerText = `${unread_count} new ${unread_count == 1? 'message': 'messages'}`;
+    if(unread_count == 0) {
+        text_button_notification.classList.add('hidden');
+    } else {
+        text_button_notification.classList.remove('hidden');
+    }
 }
 
 let s = new Date();
@@ -107,15 +111,10 @@ function sort_message_previews_by_date() {
     }
 }
 
+function clear_thread(thread_name) {
+    messages[thread_name].messages.length = 0;
+}
 
-setTimeout(() => {
-    // sendMessage('ass burger', {
-    //     'sender': 'foo burger',
-    //     'message_type': 'text',
-    //     'message': 'Yeah, about that'
-    // });
-    playSound('music');
-}, 200);
 
 
 // loadTexts()

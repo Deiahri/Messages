@@ -55,14 +55,20 @@
                     <p class="fs-5 no-margin">Last message</p>
                 </div>
             </div>
+            <div class="vertical-separator-4"></div>
+            <p class="fs-6 fc-white">Press the refresh button to restart dialog</p>
         </div>
 
         <div class="flex align-vertical-top min-height-90 max-height-90 hideable fullHide mt-5" id="messenger_page" thread_name="thread_name_44">
+            <div class="flex icon-container position-absolute top-right icon-smaller align-horizontal" id="refresh_dialog_btn">
+                <div class="icon-refresh"></div>
+            </div>
+
             <div class="flex icon-container position-absolute top-left icon-smaller align-horizontal" id="back_to_text_page_btn">
                 <div class="icon-back"></div>
-                <p class="bruh no-margin fs-1 fw-bold fc-white" style="margin-left: 25px;">Cassi</p>
+                <p class="no-wrap no-margin fs-1 fw-bold fc-white max-width" style="margin-left: 25px;" id="message_thread_section_name">Cassi</p>
             </div>
-            <div class="flex max-width max-height text_section wider align-vertical-bottom" id="message_thread_section"></div>
+            <div class="flex max-width max-height text_section wider align-vertical-bottom height-60vh" id="message_thread_section"></div>
             <div class="flex max-width py-2 align-vertical" id="message_option_section"></div>
             <div class="vertical-separator-2"></div>
             <div class="input transparent max-width text-align-left">

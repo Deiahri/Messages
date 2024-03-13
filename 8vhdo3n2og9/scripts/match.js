@@ -1,7 +1,7 @@
 let text_button = document.getElementById('text_button');
 let match_page = document.getElementById('match_page');
 
-var username = 'Test Name';
+let username;
 
 const match_counter = document.getElementById('match_counter');
 
@@ -109,6 +109,8 @@ function decline_current_match() {
 
 
 function simulate_matches() {
+    console.log('called JSJSDJD');
+    update_matches();
     setTimeout(add_match.bind(null, {
         name: 'Cassi',
         description: 'Likes big butts',
@@ -119,13 +121,19 @@ function simulate_matches() {
         name: 'Trade with the pro',
         description: 'I know you like this RIP(e) grandma pussy',
         image_url: './images/pro.jpg'
-    }), 500);
+    }), 9000);
 
     setTimeout(add_match.bind(null, {
         name: 'Fermina',
         description: 'I got a nice curvy body, just the way Michael likes it. HMU if you\'re nice and chocolaty, I\'ll give you everything you ever wanted.',
         image_url: './images/Fermina.png'
-    }), 17000);
+    }), 18000);
+
+    setTimeout(add_match.bind(null, {
+        name: 'Junda',
+        description: 'I got a big butt. Cassi is clearly my type',
+        image_url: './images/Junda.jpg'
+    }), 13000);
 }
 
 
@@ -145,5 +153,4 @@ match_disapprove_btn.onclick = decline_current_match;
 //     image_url: './images/Cassi.png'
 // });
 
-simulate_matches();
-update_matches();
+// simulate_matches();

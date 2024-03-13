@@ -33,10 +33,75 @@
             <a class="btn btn-light fs-4" onclick="getUserNameAndGo()">Okay</a>
         </div>
 
+        <div class="flex align-vertical hideable fullHide" id="match_page">
+            <a class="icon-container position-absolute top-right" id="text_button">
+                <div class="notification-icon hidden" id="text_button_notification"></div>
+                <div class="icon-text"></div>
+            </a>
+            <p class="fs-2 fc-white max-width" id="match_counter">1 new match</p>
+            <div class="flex match_image_container text-align-center align-center">
+                <div class="match_image" id="match_image"></div>
+                <div class="switch position-absolute left-side" id="switch_left">
+                    <div class="switch-left-icon"></div>
+                </div>
+                <div class="switch position-absolute right-side" id="switch_right">
+                    <div class="switch-right-icon"></div>
+                </div>
+            </div>
+            <div class="max-width align-vertical-left max-width-75">
+                <p class="no-margin fs-1 fc-white fw-bold" id="match_name">John Doe</p>
+                <p class="no-margin fs-7 fc-white" id="match_description">Some facts about john doe</p>
+                <div class="vertical-separator-4"></div>
+            </div>
+            <a class="icon-container position-absolute bottom-right hideable" id="match_approve_btn">
+                <div class="icon-heart"></div>
+            </a>
+            <a class="icon-container position-absolute bottom-left hideable" id="match_disapprove_btn">
+                <div class="icon-thumbs-down"></div>
+            </a>
+        </div>
 
+        <div class="flex align-vertical-top min-height-90 hideable fullHide pt-5" id="text_page">
+            <a class="icon-container position-absolute top-right" id="match_button">
+                <div class="notification-icon" id="match_notification_icon"></div>
+                <div class="icon-heart"></div>
+            </a>
+            <p class="fs-2 fc-white max-width" id="message_count">13 new messages</p>
+            <div class="max-width text_section" id="text_section">
+            </div>
+        </div>
+
+        <div class="flex align-vertical-top min-height-90 max-height-90 hideable fullHide mt-5" id="messenger_page" thread_name="thread_name_44">
+            <div class="flex icon-container position-absolute top-right icon-smaller align-horizontal" id="refresh_dialog_btn">
+                <div class="icon-refresh"></div>
+            </div>
+            <div class="flex icon-container position-absolute top-left icon-smaller align-horizontal" id="back_to_text_page_btn">
+                <div class="icon-back"></div>
+                <p class="no-wrap no-margin fs-1 fw-bold fc-white max-width" style="margin-left: 25px;" id="message_thread_section_name">Cassi</p>
+            </div>
+            <div class="flex max-width max-height text_section wider align-vertical-bottom height-60vh" id="message_thread_section"></div>
+            <div class="flex max-width py-2 align-vertical" id="message_option_section"></div>
+            <div class="vertical-separator-2"></div>
+            <div class="input transparent max-width text-align-left">
+        </div>
+
+    </div>
+    <div class="flex popup_background hideable fullHide align-vertical-center" id="pop_up">
+        <div class="icon-container icon-smaller position-absolute top-right" onclick="hidePopup()">
+            <div class="icon-close"></div>
+        </div>
+        <div style="width: 90vw; height: 90vw; background-color: rgb(255, 255, 255); position:relative; border-radius: 10px;" class="flex align-vertical-center">
+            <img style="padding:3px; width: 100%; height: 100%; object-fit: contain; content: url('./images/catdancinggif.gif'); position: absolute; border-radius: 10px;" id="pop_up_image">
+        </div>
     </div>
     <script src="./scripts/tools.js"></script>
     <script src="./scripts/music.js"></script>
+    <script src="./scripts/match.js"></script>
     <script src="./scripts/loading.js"></script>
+
+    <script src="./scripts/messenger.js"></script>
+    <script src="./scripts/objects.js"></script>
+    <script src="./scripts/text.js"></script>
+    <script src="./scripts/romance_script.js"></script>
 </body>
 </html>

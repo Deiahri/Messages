@@ -37,6 +37,10 @@ input.transparent:focus {
     width: 75vw;
 }
 
+.height-60vh {
+    height: 10px;
+}
+
 .max-height {
     height: 100%;
 }
@@ -322,6 +326,12 @@ input.transparent:focus {
     height: 30px;
 }
 
+.icon-refresh {
+    content: url('./images/icons/refresh.png');
+    width: 100%;
+    filter: invert(1);
+}
+
 .match_image_container {
     width: 75vw;
     height: 75vw;
@@ -406,6 +416,7 @@ input.transparent:focus {
 }
 
 .text_section {
+    margin-top: 20px;
     border-radius: 10px;
     border: solid white 1px;
     min-height: 50px;
@@ -470,4 +481,8 @@ input.transparent:focus {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.158);
     z-index: 100;
+}
+
+.no-wrap {
+    text-wrap:nowrap;
 }
