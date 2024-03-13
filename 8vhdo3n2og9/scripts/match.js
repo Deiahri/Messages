@@ -103,7 +103,7 @@ function accept_current_match() {
 
 function decline_current_match() {
     playSound('no match');
-    setTimeout(add_match.bind(null, matches[current_match_index]), 2000);
+    setTimeout(add_match.bind(null, matches[current_match_index]), 3000);
     remove_current_match();
 }
 

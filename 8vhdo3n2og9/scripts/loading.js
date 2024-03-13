@@ -56,7 +56,7 @@ start_screen.onclick = () => {
 function getUserNameAndGo() {
     username = `${document.getElementById('name_input').value}`.trim();
     if(username) {
-        if(username.toLowerCase() == 'fermina' || username.toLowerCase() == 'cassi' || username.toLowerCase() == 'trade with the pro') {
+        if(username.toLowerCase() == 'fermina' || username.toLowerCase() == 'cassi' || username.toLowerCase() == 'trade with the pro' || username.toLowerCase() == 'junda' ) {
             document.getElementById('warning_text').innerHTML = 'You can\'t use that name...'
         } else {
             initialize_romance_script();
@@ -67,7 +67,7 @@ function getUserNameAndGo() {
                 showFade(match_page);
                 simulate_matches();
             });
-            music.volume = 0.05;
+            music.volume = 0.15;
             playSound('nar2');
         }
     } else {
