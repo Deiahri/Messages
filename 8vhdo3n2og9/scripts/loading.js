@@ -45,9 +45,11 @@ start_screen.onclick = () => {
             setTimeout(() => {
                 // playSound('enter ping');
                 // soundOnEnded('enter ping', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
-                playSound('intro narration');
-                soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.8; })
-            }, 500)
+                // playSound('intro narration');
+                // soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.8; });
+                showFade(document.getElementById('get_name_section')); 
+                music.volume = 0.8;
+            }, 500);
         }, 1500);
     }, 500);
 }
@@ -61,14 +63,17 @@ function getUserNameAndGo() {
         } else {
             initialize_romance_script();
             hideFade(document.getElementById('get_name_section'));
-            document.getElementById('warning_text').innerHTML = ''
-            soundOnEnded('nar2', ()=> {
-                music.volume = 0.8;
-                showFade(match_page);
-                simulate_matches();
-            });
-            music.volume = 0.15;
-            playSound('nar2');
+            // document.getElementById('warning_text').innerHTML = ''
+            // soundOnEnded('nar2', ()=> {
+            //     music.volume = 0.8;
+            //     showFade(match_page);
+            //     simulate_matches();
+            // });
+            // music.volume = 0.15;
+            // playSound('nar2');
+            music.volume = 0.8;
+            showFade(match_page);
+            simulate_matches();
         }
     } else {
         document.getElementById('warning_text').innerHTML = 'Your first name cannot be blank'

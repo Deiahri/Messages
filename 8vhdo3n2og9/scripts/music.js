@@ -38,10 +38,8 @@ function playSound(soundName, priority=false) {
         });
         music.volume = 0.2;
     }
-
     soundLibrary[soundName].removeAttribute('onended');
     soundLibrary[soundName].play();
-    
 }
 
 function pauseSound(soundName) {
