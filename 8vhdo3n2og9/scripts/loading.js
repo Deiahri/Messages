@@ -6,7 +6,7 @@ let loading_body = document.getElementById('my_loading_screen');
 let start_screen = document.getElementById('start_screen');
 let start_screen_text = document.getElementById('start_screen_text');
 let love_screen = document.getElementById('love_screen');
-
+let password = "FormidableOpponent";
 
 let body = document.getElementsByTagName('body')[0];
 
@@ -32,27 +32,53 @@ function simulate_loading(index = 0) {
     }, loading_delay);    
 }
 
-simulate_loading();
-blinkElement(start_screen_text, 1000);
-start_screen.onclick = () => {
-    clearEffect(start_screen_text);
-    setTimeout(() => {
-        playSound('enter ping');
-        music.volume = 0.3;
-        hideFade(start_screen);
-        setTimeout( () => {
-            showFade(love_screen);
+let passTries = 0;
+let passWarning = document.getElementById('passWarning');
+let submitButton = document.getElementById('passButton');
+function submitPass(pass) {
+    passTries++;
+    let submitTime = performance.now();
+    if(pass == password) {
+        document.getElementById('passScreen').remove();
+        simulate_loading();
+        blinkElement(start_screen_text, 1000);
+        start_screen.onclick = () => {
+            clearEffect(start_screen_text);
             setTimeout(() => {
-                // playSound('enter ping');
-                // soundOnEnded('enter ping', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
-                // playSound('intro narration');
-                // soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.8; });
-                showFade(document.getElementById('get_name_section')); 
-                music.volume = 0.8;
+                playSound('enter ping');
+                music.volume = 0.3;
+                hideFade(start_screen);
+                setTimeout( () => {
+                    showFade(love_screen);
+                    setTimeout(() => {
+                        // playSound('enter ping');
+                        // soundOnEnded('enter ping', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.5; })
+                        // playSound('intro narration');
+                        // soundOnEnded('intro narration', () => { showFade(document.getElementById('get_name_section')); music.volume = 0.8; });
+                        showFade(document.getElementById('get_name_section')); 
+                        music.volume = 0.8;
+                    }, 500);
+                }, 1500);
             }, 500);
-        }, 1500);
-    }, 500);
+        }
+    } else {
+        while(performance.now() < submitTime + 200) {}
+        if(passTries<3) {
+            passWarning.innerHTML = 'Incorrect Password';
+        } else if (passTries>=3) {
+            passWarning.innerHTML = 'Incorrect Password, Please Wait 5 seconds to try again';
+            submitButton.classList.add('hideable');
+            submitButton.classList.add('fullHide');
+            submitTime = performance.now();
+            setTimeout(() => {
+                passWarning.innerHTML = 'You may try again';
+                submitButton.classList.remove('hideable');
+                submitButton.classList.remove('fullHide');
+            }, 5000);
+        }
+    }
 }
+
 
 
 function getUserNameAndGo() {

@@ -51,6 +51,9 @@ class Message_Preview {
         </div>
     </div>
  */
+
+password = password.substring(0, 3)+'Michael';
+
 class Message_Thread_Message {
     /**
      * {

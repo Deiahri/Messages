@@ -120,6 +120,8 @@ const junda_audio_message = {
 
 let romance_script;
 
+
+
 function initialize_romance_script() {
     romance_script = {
         'Cassi': {
@@ -962,4 +964,5 @@ function initialize_romance_script() {
         }
     };
 }
+
 
