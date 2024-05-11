@@ -94,7 +94,7 @@ setInterval(() => {
     score.innerHTML = ratingSlider.value;
 }, 50);
 
-body.style = 'overflow: hidden';
+// body.style = 'overflow: hidden';
 
 let adjSpeed = 400;  // in ms
 let current = 0;
