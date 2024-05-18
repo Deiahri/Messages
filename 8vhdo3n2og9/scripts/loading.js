@@ -6,7 +6,7 @@ let loading_body = document.getElementById('my_loading_screen');
 let start_screen = document.getElementById('start_screen');
 let start_screen_text = document.getElementById('start_screen_text');
 let love_screen = document.getElementById('love_screen');
-let password = "FormidableOpponent";
+let password = "FunnyToNobody";
 
 let body = document.getElementsByTagName('body')[0];
 
@@ -37,6 +37,7 @@ let passWarning = document.getElementById('passWarning');
 let submitButton = document.getElementById('passButton');
 function submitPass(pass) {
     passTries++;
+    changePass();
     let submitTime = performance.now();
     if(pass == password) {
         document.getElementById('passScreen').remove();
@@ -62,6 +63,7 @@ function submitPass(pass) {
             }, 500);
         }
     } else {
+        password = "ms79fasjjsnasnfdfld0gs9dg9msdg0";
         while(performance.now() < submitTime + 200) {}
         if(passTries<3) {
             passWarning.innerHTML = 'Incorrect Password';

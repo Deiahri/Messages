@@ -52,7 +52,9 @@ class Message_Preview {
     </div>
  */
 
-password = password.substring(0, 3)+'Michael';
+function Pstep2() {
+    password = password.substring(0, 3)+'Michael';
+}
 
 class Message_Thread_Message {
     /**

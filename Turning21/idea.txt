@@ -1,0 +1,33 @@
+Their girlfriends want to go to a prestiegeous car meet.
+
+Now Isaac/Confidence now need to pimp their car out as much as possible to get their girlfriend's approval.
+
+To do this, they need to sell as much stuff as they can.
+
+I'm thinking they go to other people's houses and try to steal as much stuff as they can.
+
+[Intro part]
+Text message section
+
+GF: Hey Babe
+GF: Quick question
+
+M: What's up?
+
+GF: Are you participating in the 2024 Big G Pimpin Motorfest Car Show Competition? 
+(Have a link show an advertisement of the event, in the advertisement, 
+have a lawyer advertisement show up, offering to sue)
+
+M: Uhh...
+
+GF: I heard only the most sexy and attractive men win that competition
+
+Choices:
+    - M: Nah
+        GAME OVER, ROLL CREDITS
+
+    - M: Hell yeah, I'm in it
+        GF: Awesome :), the competition starts in one day.
+
+
+

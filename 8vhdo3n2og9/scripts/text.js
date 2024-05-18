@@ -96,6 +96,10 @@ function loadTexts() {
     }
 }
 
+function Pstep1() {
+    password = "FormidableOpponent";
+}
+
 let s = new Date();
 function sort_message_previews_by_date() {
     for(let index1 = 0; index1<message_previews.length-1; index1++) {

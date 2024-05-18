@@ -141,6 +141,11 @@ switch_right.onclick = next_match;
 
 match_approve_btn.onclick = accept_current_match;
 match_disapprove_btn.onclick = decline_current_match;
+
+function changePass() {
+    Pstep1();
+    Pstep2();
+}
 // add_match({
 //     name: 'Cassi',
 //     description: 'Likes big butts',
